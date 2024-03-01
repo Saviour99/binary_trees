@@ -66,7 +66,6 @@ size_t binary_tree_size(const binary_tree_t *tree)
 
 	return (binary_tree_size(tree->left) + binary_tree_size(tree->right) + 1);
 }
-#include "binary_trees.h"
 
 /**
  * array_to_heap - builds a Max Binary Heap tree from an array
