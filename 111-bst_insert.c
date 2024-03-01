@@ -77,4 +77,7 @@ bst_t *bst_insert(bst_t **tree, int value)
 			if (new == NULL)
 				return (NULL);
 			return (curr->right = new);
-
+		}
+	}
+	return (NULL);
+}
