@@ -26,6 +26,19 @@ typedef struct binary_tree_s bst_t;
 typedef struct binary_tree_s avl_t;
 typedef struct binary_tree_s heap_t;
 
+
+typedef struct node_s
+{
+        const binary_tree_t *node;
+        struct node_s *next;
+} ll;
+
+ll *append(ll *head, const binary_tree_t *btnode);
+void free_list(ll *head);
+ll *get_children(ll *head, const binary_tree_t *parent);
+void levels_rec(ll *head, void (*func)(int));
+
+
 /* Printing helper function */
 void binary_tree_print(const binary_tree_t *);
 
@@ -68,6 +81,12 @@ heap_t *heap_insert(heap_t **root, int value);
 heap_t *array_to_heap(int *array, size_t size);
 int heap_extract(heap_t **root);
 int *heap_to_sorted_array(heap_t *heap, size_t *size);
+
+
+ll *append(ll *head, const binary_tree_t *btnode);
+void free_list(ll *head);
+ll *get_children(ll *head, const binary_tree_t *parent);
+void levels_rec(ll *head, void (*func)(int));
 
 
 #endif
